@@ -33,6 +33,14 @@ body{
     background-color:#eee;
 }
 
+.heading{
+    text-align:center;
+    padding:2rem 0;
+    padding-bottom:3rem;
+    font-size:3.5rem;
+    color:var(--black);
+}
+
 .btn{
     border:1px solid #130f40;
     padding:.5rem 1.5rem;
@@ -256,6 +264,7 @@ section{
 }
 
 .home{
+    text-align:center;
     background:url(./Image/banner.png) no-repeat;
     padding-top:17rem;
     padding-bottom:10rem;
@@ -284,9 +293,51 @@ section{
     padding:1.7rem;
     line-height:2.5rem;
     text-align:center;
+    width:550px;
 }
 
+ .heading span{
+    background:var(--orange);
+    color:#fff;
+    display:inline-block;
+    padding:.5rem 3rem;
+    clip-path:polygon(100% 0%, 93% 50%, 100% 99%, 0 100%, 7% 50%, 0 0);
+ }
 
+ .features .box-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:1.5rem;
+    max-width:1200px;
+    margin:0 auto;
+ }
+
+ .features .box-container .box{
+    border-radius:.5rem;
+    text-align:center;
+    background-color:#fff;
+    box-shadow:var(--box-shadow);
+    padding:1.5rem;
+    width:32%;
+ }
+
+ .features .box-container .box h3{
+    font-size:2rem;
+ }
+
+ .features .box-container .box p{
+    font-size:1.5rem;
+    color:var(--light-color);
+    padding:1.5rem 0;
+ }
+
+
+ .features .box-container .box img{
+    width:35rem;
+    height:27rem;
+    background-image:url(./Image/features\ background.png);
+ }
 
 /* @mediea quries */
 @media (max-width:991px){
@@ -299,7 +350,18 @@ section{
     section{
         padding:2rem;
     }
-    
+    .home .content p{
+        font-size:1.7rem;
+        padding:1rem;
+        line-height:2.5rem;
+        width:100%;
+    }
+    .header .search-form{
+        width:92%;
+    }
+    .features .box-container .box{
+        width:100%;
+     }
 }
 
 @media (max-width:768px){
