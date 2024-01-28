@@ -39,11 +39,14 @@ document.querySelector('#menu-btn').onclick =()=>{
 }
 
 // window 
-window.onscroll =()=>{
-    navbar.classList.remove('active')
-    searchForm.classList.remove('active')
-    shoppingCart.classList.remove('active')
-    loginUser.classList.remove('active')
-}
+// window.onscroll =()=>{
+//     navbar.classList.remove('active')
+//     searchForm.classList.remove('active')
+//     shoppingCart.classList.remove('active')
+//     loginUser.classList.remove('active')
+// }
+
+
+
 
 
