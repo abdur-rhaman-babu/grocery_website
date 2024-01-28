@@ -32,6 +32,21 @@ html{
 body{
     background-color:#eee;
 }
+
+.btn{
+    border:1px solid #130f40;
+    padding:.5rem 1.5rem;
+    font-size:1.7rem;
+    color:var(--black);
+    cursor: pointer;
+    border-radius:.5rem;
+}
+
+.btn:hover{
+    background-color:var(--orange);
+    transition:.3s linear;
+    color:#fff;
+}
 .header{
     position:fixed;
     top:0; left:0; right:0;
@@ -104,10 +119,17 @@ body{
     padding: 0 1rem;
 }
 
+.header .search-form.active{
+    right:2rem;
+    transition:.2s linear;
+}
+
 .header .search-form input{
     width:100%;
     height:100%;
     background-color:none;
+    text-transform:none;
+    font-size:1.6rem;
 }
 
 .header .search-form label{
@@ -116,3 +138,200 @@ body{
     cursor: pointer;
 }
 
+.header .shopping-cart, .login-form{
+    position:absolute;
+    top:110%;
+    right:-110%;
+    width:30rem;
+    background-color:#fff;
+    border-radius:.5rem;
+    box-shadow:var(--box-shadow);
+    padding:1rem;
+    z-index:-1;
+}
+
+.header .shopping-cart.active{
+    right:2rem;
+    transition:.2s linear;
+}
+
+.header .shopping-cart .box{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:1rem;
+    border:var(--border);
+    height:10rem;
+    margin-top:1rem;
+}
+
+.header .shopping-cart .box img{
+    width:10rem;
+    height:6rem;
+}
+
+.header .shopping-cart .box .content h3{
+    color:var(--black);
+    font-size:1.7rem;
+}
+
+.header .shopping-cart .box .content span{
+    color:var(--light-color);
+    font-size:1.5rem;
+    font-weight:500;
+}
+
+.header .shopping-cart .box i{
+    color:var(--light-color);
+    font-size:2rem;
+    cursor: pointer;
+}
+
+.total{
+    text-align:center;
+    font-size:2.5rem;
+    padding:1rem .3rem;
+}
+
+.header .shopping-cart .btn{
+    padding:.5rem 35%;
+}
+
+.header .login-form button {
+    margin:1rem 0;
+    text-align:center;
+    width:100%;
+    color:var(--black);
+    border: 1px solid var(--black);
+    padding:.5rem .3rem;
+    border-radius:.5rem;
+    font-size:1.7rem;
+    cursor: pointer;
+    background:none;
+}
+
+.header .login-form .new-account{
+    font-size:1.5rem;
+    text-align: center;
+}
+
+.header .login-form button:hover{
+    background-color:var(--orange);
+    transition:.5s linear;
+    color:#fff;
+}
+
+.header .login-form h3{
+    text-align:center;
+    font-size:2rem;
+}
+
+.header .login-form label{
+    text-align:center;
+    font-size:1.5rem;
+    font-weight:500;
+}
+
+.header .login-form a{
+    font-size:1.2rem;
+}
+
+.header .login-form.active{
+    right:2rem;
+    transition:.3s linear;
+}
+
+.header .login-form .login-box{
+    border:var(--border);
+    padding:.8rem .3rem;
+    border-radius:.5rem;
+}
+
+.header .login-form .login-box input{
+    width:100%;
+}
+
+section{
+    padding:2rem 9%;
+}
+
+.home{
+    background:url(./Image/banner.png) no-repeat;
+    padding-top:17rem;
+    padding-bottom:10rem;
+    background-size:cover;
+    background-position:center;
+}
+
+.home .content{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.home .content h3{
+    font-size:2.7rem;
+    color:var(--black);
+}
+
+.home .content h3 span{
+    color:var(--orange);
+}
+
+.home .content p{
+    color:var(--light-color);
+    font-size:1.7rem;
+    padding:1.7rem;
+    line-height:2.5rem;
+    text-align:center;
+}
+
+
+
+/* @mediea quries */
+@media (max-width:991px){
+    html{
+        font-size:55%;
+    }
+    .header{
+        padding:2rem;
+    }
+    section{
+        padding:2rem;
+    }
+    
+}
+
+@media (max-width:768px){
+  .header .navbar{
+    position:absolute;
+    top:110%;
+    right:-110%;
+    box-shadow:var(--box-shadow);
+    width:25rem;
+    background:#fff;
+  }
+  .header .navbar a{
+    font-size:2rem;
+    display:block;
+    margin:1rem 1.5rem;
+  }
+
+  .header .navbar.active{
+    right:2rem;
+    transition:.4s linear;
+  }
+
+  #menu-btn{
+    display:block;
+    float:left;
+ }
+}
+
+
+
+@media (max-width:450px){
+    html{
+        font-size:50%;
+    }
+}
